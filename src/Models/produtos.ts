@@ -6,10 +6,10 @@ export interface ProdutosInterface extends Model{
     nome:string,
     igrediente:string,
     valor:number,
-    valorPromocional:number,
-    imagem:any,
-    quantidade:number,
-    promocao:boolean,
+    valorPromocional?:number,
+    imagem?:any,
+    quantidade?:number,
+    promocao?:boolean,
     categoria:string,
     subCategoria:string
 }
@@ -27,10 +27,10 @@ export const Produtos = sequelizee.define<ProdutosInterface>('produtos',{
         type: DataTypes.STRING
     },
     valor:{
-        type: DataTypes.NUMBER
+        type: DataTypes.STRING
     },
     valorPromocional:{
-        type: DataTypes.NUMBER
+        type: DataTypes.STRING
     },
     imagem:{
         type: DataTypes.BLOB
